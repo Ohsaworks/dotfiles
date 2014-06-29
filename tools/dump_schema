@@ -1,0 +1,1 @@
+mysqldump -u root -p $1 --no-data | sed -e "s/CREATE TABLE /&$1./" > ~/var/$1.`hostname`.`php -r 'echo date("ymd_Hi");'`.sql

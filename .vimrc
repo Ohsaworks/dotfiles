@@ -131,20 +131,6 @@ function! s:mkdir(dir, force)
 endfunction
 autocmd MyAutoCmd BufWritePre * call s:mkdir(expand('<afile>:p:h'), v:cmdbang)
 
-" vim 起動時のみカレントディレクトリを開いたファイルの親ディレクトリに指定
-autocmd MyAutoCmd VimEnter * call s:ChangeCurrentDir('', '')
-function! s:ChangeCurrentDir(directory, bang)
-    if a:directory == ''
-        lcd %:p:h
-    else
-        execute 'lcd' . a:directory
-    endif
-
-    if a:bang == ''
-        pwd
-    endif
-endfunction
-
 " ~/.vimrc.localが存在する場合のみ設定を読み込む
 let s:local_vimrc = expand('~/.vimrc.local')
 if filereadable(s:local_vimrc)
