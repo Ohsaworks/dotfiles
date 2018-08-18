@@ -109,9 +109,5 @@ fi
 export PYLEARN2_DATA_PATH=/home/ubuntu/var
 export PYTHONPATH=$PYTHONPATH:/home/ubuntu/src/WeblabDeepLearning/pylearn2/:/home/ubuntu/src/WeblabDeepLearning/pylearn2/pylearn2/
 
-<<<<<<< HEAD
-export PATH=$PATH:/home/ubuntu/src/dotfiles/tools/
-=======
 export PATH=$PATH:~/src/dotfiles/tools/
 
->>>>>>> 3de8daab3a965a58636d01b57995379b8a1285ed
